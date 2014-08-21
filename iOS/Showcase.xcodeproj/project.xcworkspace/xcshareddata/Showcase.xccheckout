@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2C625EB5-6584-4B44-A856-A1095F1AC99C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Showcase</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DBDC6BFD-5661-44A1-A383-44E9AF174AED</key>
+		<string>https://github.com/TeddyTab/Showcase</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS/Showcase.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DBDC6BFD-5661-44A1-A383-44E9AF174AED</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>DBDC6BFD-5661-44A1-A383-44E9AF174AED</key>
+		<string>https://github.com/TeddyTab/Showcase</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TeddyTab/Showcase/iOS/Showcase.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DBDC6BFD-5661-44A1-A383-44E9AF174AED</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DBDC6BFD-5661-44A1-A383-44E9AF174AED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Showcase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
