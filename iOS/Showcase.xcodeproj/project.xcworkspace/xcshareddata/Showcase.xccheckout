@@ -5,39 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2C625EB5-6584-4B44-A856-A1095F1AC99C</string>
+	<string>7482E7FC-858C-4D1B-AC99-9BB3B66619E2</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Showcase</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>DBDC6BFD-5661-44A1-A383-44E9AF174AED</key>
-		<string>https://github.com/TeddyTab/Showcase</string>
+		<key>17916A47-CFF3-4AFC-A99F-41470388B8E5</key>
+		<string>https://github.com/TeddyTab/Showcase.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>iOS/Showcase.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>DBDC6BFD-5661-44A1-A383-44E9AF174AED</key>
+		<key>17916A47-CFF3-4AFC-A99F-41470388B8E5</key>
 		<string>../../..</string>
 	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>DBDC6BFD-5661-44A1-A383-44E9AF174AED</key>
-		<string>https://github.com/TeddyTab/Showcase</string>
-	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/TeddyTab/Showcase/iOS/Showcase.xcodeproj</string>
+	<string>https://github.com/TeddyTab/Showcase.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>DBDC6BFD-5661-44A1-A383-44E9AF174AED</string>
+	<string>17916A47-CFF3-4AFC-A99F-41470388B8E5</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>DBDC6BFD-5661-44A1-A383-44E9AF174AED</string>
+			<string>17916A47-CFF3-4AFC-A99F-41470388B8E5</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Showcase</string>
 		</dict>

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E62811519A677B70066EDDC /* AnimatedAnchorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E62811419A677B70066EDDC /* AnimatedAnchorViewController.m */; };
+		5E62811919A68B400066EDDC /* candy_crush2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E62811619A68B400066EDDC /* candy_crush2.jpg */; };
+		5E62811A19A68B400066EDDC /* cards.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E62811719A68B400066EDDC /* cards.png */; };
+		5E62811B19A68B400066EDDC /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E62811819A68B400066EDDC /* chat.png */; };
+		5E62811E19A68CD70066EDDC /* PaintAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E62811D19A68CD70066EDDC /* PaintAdViewController.m */; };
 		5EE025B719A5427A009F3D84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE025B619A5427A009F3D84 /* Foundation.framework */; };
 		5EE025B919A5427A009F3D84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE025B819A5427A009F3D84 /* CoreGraphics.framework */; };
 		5EE025BB19A5427A009F3D84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE025BA19A5427A009F3D84 /* UIKit.framework */; };
@@ -27,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E62811319A677B70066EDDC /* AnimatedAnchorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedAnchorViewController.h; sourceTree = "<group>"; };
+		5E62811419A677B70066EDDC /* AnimatedAnchorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedAnchorViewController.m; sourceTree = "<group>"; };
+		5E62811619A68B400066EDDC /* candy_crush2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = candy_crush2.jpg; sourceTree = "<group>"; };
+		5E62811719A68B400066EDDC /* cards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cards.png; sourceTree = "<group>"; };
+		5E62811819A68B400066EDDC /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
+		5E62811C19A68CD70066EDDC /* PaintAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintAdViewController.h; sourceTree = "<group>"; };
+		5E62811D19A68CD70066EDDC /* PaintAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintAdViewController.m; sourceTree = "<group>"; };
 		5EE025B319A5427A009F3D84 /* Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Showcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE025B619A5427A009F3D84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5EE025B819A5427A009F3D84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +129,10 @@
 				5EE025CB19A5427A009F3D84 /* Main_iPad.storyboard */,
 				5EE025D119A5427A009F3D84 /* Images.xcassets */,
 				5EE025BD19A5427A009F3D84 /* Supporting Files */,
+				5E62811319A677B70066EDDC /* AnimatedAnchorViewController.h */,
+				5E62811419A677B70066EDDC /* AnimatedAnchorViewController.m */,
+				5E62811C19A68CD70066EDDC /* PaintAdViewController.h */,
+				5E62811D19A68CD70066EDDC /* PaintAdViewController.m */,
 			);
 			path = Showcase;
 			sourceTree = "<group>";
@@ -124,6 +140,9 @@
 		5EE025BD19A5427A009F3D84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5E62811619A68B400066EDDC /* candy_crush2.jpg */,
+				5E62811719A68B400066EDDC /* cards.png */,
+				5E62811819A68B400066EDDC /* chat.png */,
 				5EE025F219A5445D009F3D84 /* candy_board_portrait.png */,
 				5EE025F319A5445D009F3D84 /* candy_board.png */,
 				5EE025BE19A5427A009F3D84 /* Showcase-Info.plist */,
@@ -196,9 +215,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EE025CD19A5427A009F3D84 /* Main_iPad.storyboard in Resources */,
+				5E62811A19A68B400066EDDC /* cards.png in Resources */,
+				5E62811B19A68B400066EDDC /* chat.png in Resources */,
 				5EE025D219A5427A009F3D84 /* Images.xcassets in Resources */,
 				5EE025F419A5445D009F3D84 /* candy_board_portrait.png in Resources */,
 				5EE025CA19A5427A009F3D84 /* Main_iPhone.storyboard in Resources */,
+				5E62811919A68B400066EDDC /* candy_crush2.jpg in Resources */,
 				5EE025F519A5445D009F3D84 /* candy_board.png in Resources */,
 				5EE025C119A5427A009F3D84 /* InfoPlist.strings in Resources */,
 			);
@@ -213,6 +235,8 @@
 			files = (
 				5EE025F819A5459D009F3D84 /* FirstPageViewController.m in Sources */,
 				5EE025F119A5441B009F3D84 /* GameViewController.m in Sources */,
+				5E62811E19A68CD70066EDDC /* PaintAdViewController.m in Sources */,
+				5E62811519A677B70066EDDC /* AnimatedAnchorViewController.m in Sources */,
 				5EE025C719A5427A009F3D84 /* AppDelegate.m in Sources */,
 				5EE025C319A5427A009F3D84 /* main.m in Sources */,
 			);

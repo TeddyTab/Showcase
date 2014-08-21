@@ -8,7 +8,8 @@
 
 #import "FirstPageViewController.h"
 #import "GameViewController.h"
-
+#import "AnimatedAnchorViewController.h"
+#import "PaintAdViewController.h"
 
 
 @interface FirstPageViewController ()
@@ -20,7 +21,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setButtonUI];
+    // [self setButtonUI];
+}
+
+- (IBAction)animatedAnchorClick:(id)sender {
+    AnimatedAnchorViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AnimatedAnchorViewController"];
+    [self presentViewController:molAdViewController animated:true completion:nil];
+}
+
+- (IBAction)stickerAnimationsClick:(id)sender {
+}
+
+- (IBAction)gameIntegrationClick:(id)sender {
+    GameViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GameViewController"];
+    [self presentViewController:molAdViewController animated:true completion:nil];
+}
+
+- (IBAction)paintShareClick:(id)sender {
+    PaintAdViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PaintAdViewController"];
+    [self presentViewController:molAdViewController animated:true completion:nil];
+}
+
+- (IBAction)inStreamClick:(id)sender {
 }
 
 -(void) setButtonUI {
@@ -40,7 +62,7 @@
 }
 
 - (IBAction)onMOLAdViewClick:(id)sender {
-    GameViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MOLAdViewController"];
+    GameViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GameViewController"];
     [self presentViewController:molAdViewController animated:true completion:nil];
 }
 

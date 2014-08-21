@@ -1,18 +1,18 @@
 //
-//  MOLAdViewController.m
-//  TeddyTab
+//  PaintAdViewController.m
+//  Showcase
 //
-//  Created by Gauri Tikekar on 7/4/14.
-//
+//  Created by Gauri Tikekar on 8/21/14.
+//  Copyright (c) 2014 TeddyTab. All rights reserved.
 //
 
-#import "GameViewController.h"
+#import "PaintAdViewController.h"
 
-@interface GameViewController ()
+@interface PaintAdViewController ()
 
 @end
 
-@implementation GameViewController
+@implementation PaintAdViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,11 +36,10 @@
      name:UIDeviceOrientationDidChangeNotification
      object:nil];
 
-    self.molAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"6789" frame:CGRectMake(0,0,self.adHolderView.frame.size.width,self.adHolderView.frame.size.height)];
-    //self.molAdView.tags = @"back to School";
+    self.molAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"1111" frame:CGRectMake(0,0,self.adHolderView.frame.size.width,self.adHolderView.frame.size.height)];
+    self.molAdView.tags = @"paint";
     [self.adHolderView addSubview:self.molAdView];
     [self.molAdView requestContent];
-
 }
 
 // for iOS 6

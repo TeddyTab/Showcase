@@ -1,18 +1,18 @@
 //
-//  MOLAdViewController.m
-//  TeddyTab
+//  AnimatedAnchorViewController.m
+//  Showcase
 //
-//  Created by Gauri Tikekar on 7/4/14.
-//
+//  Created by Gauri Tikekar on 8/21/14.
+//  Copyright (c) 2014 TeddyTab. All rights reserved.
 //
 
-#import "GameViewController.h"
+#import "AnimatedAnchorViewController.h"
 
-@interface GameViewController ()
+@interface AnimatedAnchorViewController ()
 
 @end
 
-@implementation GameViewController
+@implementation AnimatedAnchorViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,6 +22,7 @@
     }
     return self;
 }
+
 - (IBAction)closeView:(id)sender {
     [self dismissViewControllerAnimated:YES completion:Nil];
 }
@@ -36,8 +37,8 @@
      name:UIDeviceOrientationDidChangeNotification
      object:nil];
 
-    self.molAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"6789" frame:CGRectMake(0,0,self.adHolderView.frame.size.width,self.adHolderView.frame.size.height)];
-    //self.molAdView.tags = @"back to School";
+    self.molAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"1234" frame:CGRectMake(0,0,self.adHolderView.frame.size.width,self.adHolderView.frame.size.height)];
+    self.molAdView.tags = @"candies";
     [self.adHolderView addSubview:self.molAdView];
     [self.molAdView requestContent];
 
