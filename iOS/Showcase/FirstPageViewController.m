@@ -10,6 +10,7 @@
 #import "GameViewController.h"
 #import "AnimatedAnchorViewController.h"
 #import "PaintAdViewController.h"
+#import "StickersViewController.h"
 
 
 @interface FirstPageViewController ()
@@ -30,6 +31,9 @@
 }
 
 - (IBAction)stickerAnimationsClick:(id)sender {
+    StickersViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StickersViewController"];
+    [self presentViewController:molAdViewController animated:true completion:nil];
+
 }
 
 - (IBAction)gameIntegrationClick:(id)sender {
@@ -80,7 +84,7 @@
 // for iOS 6
 -(NSUInteger)supportedInterfaceOrientations {
 
-    return UIInterfaceOrientationMaskAll; //UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+    return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
 }
 
 

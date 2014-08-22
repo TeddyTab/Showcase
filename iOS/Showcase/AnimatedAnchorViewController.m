@@ -56,7 +56,7 @@
 // for iOS 6
 -(NSUInteger)supportedInterfaceOrientations {
 
-    return UIInterfaceOrientationMaskAll; //UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+    return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
 }
 
 - (void)didReceiveMemoryWarning

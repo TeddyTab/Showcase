@@ -37,7 +37,7 @@
      object:nil];
 
     self.molAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"6789" frame:CGRectMake(0,0,self.adHolderView.frame.size.width,self.adHolderView.frame.size.height)];
-    //self.molAdView.tags = @"back to School";
+    self.molAdView.tags = @"back pack";
     [self.adHolderView addSubview:self.molAdView];
     [self.molAdView requestContent];
 
@@ -55,7 +55,7 @@
 // for iOS 6
 -(NSUInteger)supportedInterfaceOrientations {
 
-    return UIInterfaceOrientationMaskAll; //UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+    return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
 }
 
 - (void)didReceiveMemoryWarning

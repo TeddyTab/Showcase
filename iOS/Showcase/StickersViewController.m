@@ -1,18 +1,18 @@
 //
-//  PaintAdViewController.m
+//  StickersViewController.m
 //  Showcase
 //
 //  Created by Gauri Tikekar on 8/21/14.
 //  Copyright (c) 2014 TeddyTab. All rights reserved.
 //
 
-#import "PaintAdViewController.h"
+#import "StickersViewController.h"
 
-@interface PaintAdViewController ()
+@interface StickersViewController ()
 
 @end
 
-@implementation PaintAdViewController
+@implementation StickersViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,6 +22,7 @@
     }
     return self;
 }
+
 - (IBAction)closeView:(id)sender {
     [self dismissViewControllerAnimated:YES completion:Nil];
 }
@@ -36,10 +37,11 @@
      name:UIDeviceOrientationDidChangeNotification
      object:nil];
 
-    self.molAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"1111" frame:CGRectMake(0,0,self.adHolderView.frame.size.width,self.adHolderView.frame.size.height)];
-    self.molAdView.tags = @"paint";
-    [self.adHolderView addSubview:self.molAdView];
+    self.molAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"1234" frame:CGRectMake(0,0,self.cokeAdAnchor.frame.size.width,self.cokeAdAnchor.frame.size.height)];
+    self.molAdView.tags = @"candies";
+    [self.cokeAdAnchor addSubview:self.molAdView];
     [self.molAdView requestContent];
+
 }
 
 // for iOS 6
@@ -54,7 +56,7 @@
 // for iOS 6
 -(NSUInteger)supportedInterfaceOrientations {
 
-    return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
 }
 
 - (void)didReceiveMemoryWarning

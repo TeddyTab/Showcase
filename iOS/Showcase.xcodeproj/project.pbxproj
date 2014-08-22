@@ -12,6 +12,7 @@
 		5E62811A19A68B400066EDDC /* cards.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E62811719A68B400066EDDC /* cards.png */; };
 		5E62811B19A68B400066EDDC /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E62811819A68B400066EDDC /* chat.png */; };
 		5E62811E19A68CD70066EDDC /* PaintAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E62811D19A68CD70066EDDC /* PaintAdViewController.m */; };
+		5E62812119A6F07B0066EDDC /* StickersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E62812019A6F07B0066EDDC /* StickersViewController.m */; };
 		5EE025B719A5427A009F3D84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE025B619A5427A009F3D84 /* Foundation.framework */; };
 		5EE025B919A5427A009F3D84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE025B819A5427A009F3D84 /* CoreGraphics.framework */; };
 		5EE025BB19A5427A009F3D84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE025BA19A5427A009F3D84 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 		5E62811819A68B400066EDDC /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
 		5E62811C19A68CD70066EDDC /* PaintAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintAdViewController.h; sourceTree = "<group>"; };
 		5E62811D19A68CD70066EDDC /* PaintAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintAdViewController.m; sourceTree = "<group>"; };
+		5E62811F19A6F07B0066EDDC /* StickersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickersViewController.h; sourceTree = "<group>"; };
+		5E62812019A6F07B0066EDDC /* StickersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickersViewController.m; sourceTree = "<group>"; };
 		5EE025B319A5427A009F3D84 /* Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Showcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE025B619A5427A009F3D84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5EE025B819A5427A009F3D84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,6 +136,8 @@
 				5E62811419A677B70066EDDC /* AnimatedAnchorViewController.m */,
 				5E62811C19A68CD70066EDDC /* PaintAdViewController.h */,
 				5E62811D19A68CD70066EDDC /* PaintAdViewController.m */,
+				5E62811F19A6F07B0066EDDC /* StickersViewController.h */,
+				5E62812019A6F07B0066EDDC /* StickersViewController.m */,
 			);
 			path = Showcase;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EE025F819A5459D009F3D84 /* FirstPageViewController.m in Sources */,
+				5E62812119A6F07B0066EDDC /* StickersViewController.m in Sources */,
 				5EE025F119A5441B009F3D84 /* GameViewController.m in Sources */,
 				5E62811E19A68CD70066EDDC /* PaintAdViewController.m in Sources */,
 				5E62811519A677B70066EDDC /* AnimatedAnchorViewController.m in Sources */,
