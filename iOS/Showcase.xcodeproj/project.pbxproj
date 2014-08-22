@@ -15,6 +15,8 @@
 		5E62812119A6F07B0066EDDC /* StickersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E62812019A6F07B0066EDDC /* StickersViewController.m */; };
 		5E6EDC7619A7B9DE0069F9C7 /* FirstPageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6EDC7519A7B9DE0069F9C7 /* FirstPageCollectionViewCell.m */; };
 		5E6EDC7919A7CD8D0069F9C7 /* AllAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6EDC7819A7CD8D0069F9C7 /* AllAdsViewController.m */; };
+		5E6EDC7C19A7F64E0069F9C7 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6EDC7B19A7F64E0069F9C7 /* VideoViewController.m */; };
+		5E6EDC7E19A7FBE30069F9C7 /* play_video.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5E6EDC7D19A7FBE30069F9C7 /* play_video.jpeg */; };
 		5EE025B719A5427A009F3D84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE025B619A5427A009F3D84 /* Foundation.framework */; };
 		5EE025B919A5427A009F3D84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE025B819A5427A009F3D84 /* CoreGraphics.framework */; };
 		5EE025BB19A5427A009F3D84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE025BA19A5427A009F3D84 /* UIKit.framework */; };
@@ -48,6 +50,9 @@
 		5E6EDC7519A7B9DE0069F9C7 /* FirstPageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageCollectionViewCell.m; sourceTree = "<group>"; };
 		5E6EDC7719A7CD8D0069F9C7 /* AllAdsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllAdsViewController.h; sourceTree = "<group>"; };
 		5E6EDC7819A7CD8D0069F9C7 /* AllAdsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllAdsViewController.m; sourceTree = "<group>"; };
+		5E6EDC7A19A7F64E0069F9C7 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		5E6EDC7B19A7F64E0069F9C7 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		5E6EDC7D19A7FBE30069F9C7 /* play_video.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = play_video.jpeg; sourceTree = "<group>"; };
 		5EE025B319A5427A009F3D84 /* Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Showcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE025B619A5427A009F3D84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5EE025B819A5427A009F3D84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -148,6 +153,8 @@
 				5E6EDC7519A7B9DE0069F9C7 /* FirstPageCollectionViewCell.m */,
 				5E6EDC7719A7CD8D0069F9C7 /* AllAdsViewController.h */,
 				5E6EDC7819A7CD8D0069F9C7 /* AllAdsViewController.m */,
+				5E6EDC7A19A7F64E0069F9C7 /* VideoViewController.h */,
+				5E6EDC7B19A7F64E0069F9C7 /* VideoViewController.m */,
 			);
 			path = Showcase;
 			sourceTree = "<group>";
@@ -155,6 +162,7 @@
 		5EE025BD19A5427A009F3D84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5E6EDC7D19A7FBE30069F9C7 /* play_video.jpeg */,
 				5E62811619A68B400066EDDC /* candy_crush2.jpg */,
 				5E62811719A68B400066EDDC /* cards.png */,
 				5E62811819A68B400066EDDC /* chat.png */,
@@ -238,6 +246,7 @@
 				5E62811919A68B400066EDDC /* candy_crush2.jpg in Resources */,
 				5EE025F519A5445D009F3D84 /* candy_board.png in Resources */,
 				5EE025C119A5427A009F3D84 /* InfoPlist.strings in Resources */,
+				5E6EDC7E19A7FBE30069F9C7 /* play_video.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6EDC7C19A7F64E0069F9C7 /* VideoViewController.m in Sources */,
 				5EE025F819A5459D009F3D84 /* FirstPageViewController.m in Sources */,
 				5E62812119A6F07B0066EDDC /* StickersViewController.m in Sources */,
 				5EE025F119A5441B009F3D84 /* GameViewController.m in Sources */,

@@ -159,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="168" y="-1599"/>
         </scene>
-        <!--Paint Ad View Controller-->
+        <!--Video View Controller-->
         <scene sceneID="w6j-KB-Uz2">
             <objects>
-                <viewController storyboardIdentifier="PaintAdViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="m5y-LB-dRe" customClass="PaintAdViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="m5y-LB-dRe" customClass="VideoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jzx-Np-pLM"/>
                         <viewControllerLayoutGuide type="bottom" id="uG1-Ub-WC6"/>
@@ -171,16 +171,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="candy_board.png" translatesAutoresizingMaskIntoConstraints="NO" id="7fw-uB-3W2">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDK-GC-Nrt">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NQ4-1Y-UT7">
-                                <rect key="frame" x="566" y="70" width="126" height="128"/>
+                                <rect key="frame" x="736" y="25" width="126" height="101"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj7-H7-qur">
-                                <rect key="frame" x="950" y="10" width="73" height="38"/>
+                                <rect key="frame" x="930" y="20" width="73" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Close">
@@ -197,6 +198,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="adHolderView" destination="NQ4-1Y-UT7" id="owK-w6-Fgk"/>
+                        <outlet property="webView" destination="bDK-GC-Nrt" id="xuG-43-LHB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOq-PK-Z3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -265,24 +267,6 @@
             </objects>
             <point key="canvasLocation" x="-324" y="-2755"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="IRD-6w-g9V">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="2XK-wq-Hiw" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Smb-eh-e6h"/>
-                        <viewControllerLayoutGuide type="bottom" id="H5c-BH-K6y"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aZS-N6-s2C">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ap0-HN-LoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
         <!--All Ads View Controller-->
         <scene sceneID="stn-qM-wml">
             <objects>
@@ -324,6 +308,50 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewy-qw-0YR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168" y="-1599"/>
+        </scene>
+        <!--Paint Ad View Controller-->
+        <scene sceneID="BWl-2a-vWe">
+            <objects>
+                <viewController storyboardIdentifier="PaintAdViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FVu-bm-WXB" customClass="PaintAdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NEe-cx-lC6"/>
+                        <viewControllerLayoutGuide type="bottom" id="shn-Xn-Xgo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EJE-zR-QRM">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="candy_board.png" translatesAutoresizingMaskIntoConstraints="NO" id="lOW-fc-tT5">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zNP-GS-paW">
+                                <rect key="frame" x="566" y="70" width="126" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccr-QK-iGM">
+                                <rect key="frame" x="950" y="10" width="73" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeView:" destination="FVu-bm-WXB" eventType="touchUpInside" id="ZRk-Lp-SIn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="adHolderView" destination="zNP-GS-paW" id="hPZ-db-LXp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3P-Ox-4P8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="168" y="-1599"/>
         </scene>

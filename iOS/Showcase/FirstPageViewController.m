@@ -13,12 +13,14 @@
 #import "StickersViewController.h"
 #import "FirstPageCollectionViewCell.h"
 #import "AllAdsViewController.h"
+#import "VideoViewController.h"
 
 #define ANIMATED_ANCHOR_TYPE       @"animatedAnchor"
 #define STICKER_ANIMATIONS_TYPE    @"stickerAnimations"
 #define GAME_INTEGRATION_TYPE      @"gameIntegration"
 #define PAINT_SHARE_TYPE           @"paintShare"
 #define ALL_ADS_TYPE               @"allAds"
+#define VIDEO_OVERLAY_AD           @"videoOverlayAd"
 
 @interface FirstPageViewController ()
 
@@ -64,6 +66,12 @@
     [self.cellImagesForType setObject:img forKey:ALL_ADS_TYPE];
     [self.cellLabelForType setObject:@"Integration With Game" forKey:ALL_ADS_TYPE];
 
+    img = [UIImage imageNamed:@"play_video.jpeg"];
+    [self.cellTypes addObject:VIDEO_OVERLAY_AD];
+    [self.cellImagesForType setObject:img forKey:VIDEO_OVERLAY_AD];
+    [self.cellLabelForType setObject:@"Video Overlay" forKey:VIDEO_OVERLAY_AD];
+
+
 }
 
 -(void) openAnimatedAnchor {
@@ -96,6 +104,11 @@
     [self presentViewController:molAdViewController animated:true completion:nil];
 }
 
+- (void) openVideoOverlayAd {
+    VideoViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoViewController"];
+    [self presentViewController:molAdViewController animated:true completion:nil];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -110,7 +123,14 @@
 // for iOS 6
 -(NSUInteger)supportedInterfaceOrientations {
 
-    return UIInterfaceOrientationMaskAll; //UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+    NSString *deviceType = [UIDevice currentDevice].model;
+
+    if([deviceType hasPrefix:@"iPad"]) {
+        return UIInterfaceOrientationMaskAll;
+    }
+
+
+    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
 }
 
 #pragma mark - UICollectionView Datasource
@@ -155,9 +175,11 @@
     else if([cellType isEqualToString:GAME_INTEGRATION_TYPE]) {
         [self openGameIntegration];
     }
-
     else if([cellType isEqualToString:ALL_ADS_TYPE]) {
         [self openAllAds];
+    }
+    else if([cellType isEqualToString:VIDEO_OVERLAY_AD]) {
+        [self openVideoOverlayAd];
     }
 }
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
