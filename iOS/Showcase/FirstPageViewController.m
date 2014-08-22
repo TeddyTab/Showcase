@@ -11,7 +11,14 @@
 #import "AnimatedAnchorViewController.h"
 #import "PaintAdViewController.h"
 #import "StickersViewController.h"
+#import "FirstPageCollectionViewCell.h"
+#import "AllAdsViewController.h"
 
+#define ANIMATED_ANCHOR_TYPE       @"animatedAnchor"
+#define STICKER_ANIMATIONS_TYPE    @"stickerAnimations"
+#define GAME_INTEGRATION_TYPE      @"gameIntegration"
+#define PAINT_SHARE_TYPE           @"paintShare"
+#define ALL_ADS_TYPE               @"allAds"
 
 @interface FirstPageViewController ()
 
@@ -22,7 +29,61 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // [self setButtonUI];
+
+    self.cellImagesForType = [[NSMutableDictionary alloc] init];
+    self.cellLabelForType = [[NSMutableDictionary alloc] init];
+
+    self.cellTypes = [[NSMutableArray alloc] init];
+
+    [self createCellData];
+    [self.collectionView reloadData];
+}
+
+-(void) createCellData {
+
+    UIImage *img = [UIImage imageNamed:@"candy_crush2.jpg"];
+    [self.cellTypes addObject:ANIMATED_ANCHOR_TYPE];
+    [self.cellImagesForType setObject:img forKey:ANIMATED_ANCHOR_TYPE];
+    [self.cellLabelForType setObject:@"Animated Anchor" forKey:ANIMATED_ANCHOR_TYPE];
+
+    img = [UIImage imageNamed:@"chat.png"];
+    [self.cellTypes addObject:STICKER_ANIMATIONS_TYPE];
+    [self.cellImagesForType setObject:img forKey:STICKER_ANIMATIONS_TYPE];
+    [self.cellLabelForType setObject:@"Sticker Animations" forKey:STICKER_ANIMATIONS_TYPE];
+
+    img = [UIImage imageNamed:@"candy_board.png"];
+    [self.cellTypes addObject:GAME_INTEGRATION_TYPE];
+    [self.cellImagesForType setObject:img forKey:GAME_INTEGRATION_TYPE];
+    [self.cellLabelForType setObject:@"Integration With Game" forKey:GAME_INTEGRATION_TYPE];
+
+    [self.cellTypes addObject:PAINT_SHARE_TYPE];
+    [self.cellImagesForType setObject:img forKey:PAINT_SHARE_TYPE];
+    [self.cellLabelForType setObject:@"Paint and Share" forKey:PAINT_SHARE_TYPE];
+
+    [self.cellTypes addObject:ALL_ADS_TYPE];
+    [self.cellImagesForType setObject:img forKey:ALL_ADS_TYPE];
+    [self.cellLabelForType setObject:@"Integration With Game" forKey:ALL_ADS_TYPE];
+
+}
+
+-(void) openAnimatedAnchor {
+    AnimatedAnchorViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AnimatedAnchorViewController"];
+    [self presentViewController:molAdViewController animated:true completion:nil];
+}
+
+-(void) openStickerAnimations {
+    StickersViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StickersViewController"];
+    [self presentViewController:molAdViewController animated:true completion:nil];
+}
+
+-(void) openGameIntegration {
+    GameViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GameViewController"];
+    [self presentViewController:molAdViewController animated:true completion:nil];
+}
+
+-(void) openAllAds {
+    AllAdsViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AllAdsViewController"];
+    [self presentViewController:molAdViewController animated:true completion:nil];
 }
 
 - (IBAction)animatedAnchorClick:(id)sender {
@@ -30,43 +91,8 @@
     [self presentViewController:molAdViewController animated:true completion:nil];
 }
 
-- (IBAction)stickerAnimationsClick:(id)sender {
-    StickersViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StickersViewController"];
-    [self presentViewController:molAdViewController animated:true completion:nil];
-
-}
-
-- (IBAction)gameIntegrationClick:(id)sender {
-    GameViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GameViewController"];
-    [self presentViewController:molAdViewController animated:true completion:nil];
-}
-
-- (IBAction)paintShareClick:(id)sender {
+- (void) openPaintAndShare {
     PaintAdViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PaintAdViewController"];
-    [self presentViewController:molAdViewController animated:true completion:nil];
-}
-
-- (IBAction)inStreamClick:(id)sender {
-}
-
--(void) setButtonUI {
-
-    self.gameIntegrationAdButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    self.gameIntegrationAdButton.layer.borderWidth = 1.0f;
-
-    self.gameIntegrationAdButton.layer.masksToBounds = NO;
-    self.gameIntegrationAdButton.layer.shadowOffset = CGSizeMake(2, 2);
-    self.gameIntegrationAdButton.layer.shadowRadius = 2;
-    self.gameIntegrationAdButton.layer.shadowOpacity = 0.5;
-
-    //Not sure if required. But websites say that adding the following line can improve performance as long as your view is visibly rectangular: Need to take a look
-    self.gameIntegrationAdButton.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.gameIntegrationAdButton.bounds].CGPath;
-    [self.gameIntegrationAdButton.titleLabel setBackgroundColor:[UIColor whiteColor]];
-    
-}
-
-- (IBAction)onMOLAdViewClick:(id)sender {
-    GameViewController *molAdViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GameViewController"];
     [self presentViewController:molAdViewController animated:true completion:nil];
 }
 
@@ -84,8 +110,60 @@
 // for iOS 6
 -(NSUInteger)supportedInterfaceOrientations {
 
-    return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+    return UIInterfaceOrientationMaskAll; //UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
 }
+
+#pragma mark - UICollectionView Datasource
+
+- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
+    return self.cellTypes.count;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
+    return 1;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    FirstPageCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"FirstPageCell" forIndexPath:indexPath];
+    NSString *cellType = [self.cellTypes objectAtIndex:indexPath.item];
+    if(cellType != nil) {
+        UIImage *img = [self.cellImagesForType objectForKey:cellType];
+        if(img != nil) {
+            [cell.imageView setImage:img];
+        }
+        NSString *lblText = [self.cellLabelForType objectForKey:cellType];
+        if(lblText != nil) {
+            [cell.viewLabel setText:lblText];
+        }
+    }
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *cellType = [self.cellTypes objectAtIndex:indexPath.item];
+    if([cellType isEqualToString:ANIMATED_ANCHOR_TYPE]) {
+        [self openAnimatedAnchor];
+    }
+    else if([cellType isEqualToString:STICKER_ANIMATIONS_TYPE]) {
+        [self openStickerAnimations];
+    }
+    else if([cellType isEqualToString:PAINT_SHARE_TYPE]) {
+        [self openPaintAndShare];
+    }
+    else if([cellType isEqualToString:GAME_INTEGRATION_TYPE]) {
+        [self openGameIntegration];
+    }
+
+    else if([cellType isEqualToString:ALL_ADS_TYPE]) {
+        [self openAllAds];
+    }
+}
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+    // TODO: Deselect item
+}
+
 
 
 @end

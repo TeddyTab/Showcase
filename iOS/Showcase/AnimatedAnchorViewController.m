@@ -37,7 +37,7 @@
      name:UIDeviceOrientationDidChangeNotification
      object:nil];
 
-    self.molAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"1234" frame:CGRectMake(0,0,self.adHolderView.frame.size.width,self.adHolderView.frame.size.height)];
+    self.molAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"2" frame:CGRectMake(0,0,self.adHolderView.frame.size.width,self.adHolderView.frame.size.height)];
     self.molAdView.tags = @"candies";
     [self.adHolderView addSubview:self.molAdView];
     [self.molAdView requestContent];

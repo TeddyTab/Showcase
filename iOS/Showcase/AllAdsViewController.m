@@ -1,18 +1,18 @@
 //
-//  PaintAdViewController.m
+//  AllAdsViewController.m
 //  Showcase
 //
-//  Created by Gauri Tikekar on 8/21/14.
+//  Created by Gauri Tikekar on 8/22/14.
 //  Copyright (c) 2014 TeddyTab. All rights reserved.
 //
 
-#import "PaintAdViewController.h"
+#import "AllAdsViewController.h"
 
-@interface PaintAdViewController ()
+@interface AllAdsViewController ()
 
 @end
 
-@implementation PaintAdViewController
+@implementation AllAdsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,6 +22,7 @@
     }
     return self;
 }
+
 - (IBAction)closeView:(id)sender {
     [self dismissViewControllerAnimated:YES completion:Nil];
 }
@@ -36,8 +37,7 @@
      name:UIDeviceOrientationDidChangeNotification
      object:nil];
 
-    self.molAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"3" frame:CGRectMake(0,0,self.adHolderView.frame.size.width,self.adHolderView.frame.size.height)];
-    self.molAdView.tags = @"paint";
+    self.molAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"8" frame:CGRectMake(0,0,self.adHolderView.frame.size.width,self.adHolderView.frame.size.height)];
     [self.adHolderView addSubview:self.molAdView];
     [self.molAdView requestContent];
 }

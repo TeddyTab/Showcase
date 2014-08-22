@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstPageViewController : UIViewController
+@interface FirstPageViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *gameIntegrationAdButton;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+@property (nonatomic) NSMutableDictionary *cellImagesForType;
+@property (nonatomic) NSMutableDictionary *cellLabelForType;
+@property (nonatomic) NSMutableArray *cellTypes;
 
 @end
