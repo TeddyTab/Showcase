@@ -11,9 +11,10 @@
 
 @interface StickersViewController : UIViewController
 
-@property MOLAnchorView *molAdView;
+@property (weak, nonatomic) IBOutlet UICollectionView *stickersCollection;
+@property (weak, nonatomic) IBOutlet UIView *balloonAdAnchor;
+@property (weak, nonatomic) IBOutlet UIView *snowAdAnchor;
+
 @property (weak, nonatomic) IBOutlet UIView *cokeAdAnchor;
-
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
+@property (weak, nonatomic) IBOutlet UIView *frogAdAnchor;
 @end

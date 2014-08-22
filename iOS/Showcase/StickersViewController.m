@@ -37,10 +37,25 @@
      name:UIDeviceOrientationDidChangeNotification
      object:nil];
 
-    self.molAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"1234" frame:CGRectMake(0,0,self.cokeAdAnchor.frame.size.width,self.cokeAdAnchor.frame.size.height)];
-    self.molAdView.tags = @"candies";
-    [self.cokeAdAnchor addSubview:self.molAdView];
-    [self.molAdView requestContent];
+    MOLAnchorView *cokeAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"1" frame:CGRectMake(0,0,self.cokeAdAnchor.frame.size.width,self.cokeAdAnchor.frame.size.height)];
+    cokeAdView.tags = @"coke,sticker";
+    [self.cokeAdAnchor addSubview:cokeAdView];
+    [cokeAdView requestContent];
+
+    MOLAnchorView *balloonAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"2" frame:CGRectMake(0,0,self.balloonAdAnchor.frame.size.width,self.balloonAdAnchor.frame.size.height)];
+    balloonAdView.tags = @"balloon,sticker";
+    [self.balloonAdAnchor addSubview:balloonAdView];
+    [balloonAdView requestContent];
+
+    MOLAnchorView *frogAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"2" frame:CGRectMake(0,0,self.frogAdAnchor.frame.size.width,self.frogAdAnchor.frame.size.height)];
+    frogAdView.tags = @"frog,sticker";
+    [self.frogAdAnchor addSubview:frogAdView];
+    [frogAdView requestContent];
+
+    MOLAnchorView *snowAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"2" frame:CGRectMake(0,0,self.snowAdAnchor.frame.size.width,self.snowAdAnchor.frame.size.height)];
+    snowAdView.tags = @"snow,sticker";
+    [self.snowAdAnchor addSubview:snowAdView];
+    [snowAdView requestContent];
 
 }
 
