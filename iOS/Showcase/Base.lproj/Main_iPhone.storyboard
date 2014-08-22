@@ -304,51 +304,6 @@
             </objects>
             <point key="canvasLocation" x="168" y="-1599"/>
         </scene>
-        <!--Video View Controller-->
-        <scene sceneID="r0d-DR-hrU">
-            <objects>
-                <viewController storyboardIdentifier="VideoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oPq-OP-zOS" customClass="VideoViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RT7-Tg-swI"/>
-                        <viewControllerLayoutGuide type="bottom" id="fbx-3o-3n4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LvQ-ZT-oGM">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z87-la-ANK">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G8m-aD-Os0">
-                                <rect key="frame" x="22" y="19" width="80" height="58"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOY-CQ-KBt">
-                                <rect key="frame" x="488" y="10" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Close">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="closeView:" destination="oPq-OP-zOS" eventType="touchUpInside" id="5y1-x1-k0t"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="adHolderView" destination="G8m-aD-Os0" id="4sY-Ol-wCw"/>
-                        <outlet property="webView" destination="z87-la-ANK" id="T1c-nc-NrL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sy0-Oz-RdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="168" y="-1599"/>
-        </scene>
     </scenes>
     <resources>
         <image name="candy_board.png" width="1920" height="1100"/>
