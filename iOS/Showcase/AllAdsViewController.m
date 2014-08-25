@@ -37,9 +37,16 @@
      name:UIDeviceOrientationDidChangeNotification
      object:nil];
 
+
+}
+
+-(void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
     self.molAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"8" frame:CGRectMake(0,0,self.adHolderView.frame.size.width,self.adHolderView.frame.size.height)];
     [self.adHolderView addSubview:self.molAdView];
     [self.molAdView requestContent];
+
 }
 
 // for iOS 6

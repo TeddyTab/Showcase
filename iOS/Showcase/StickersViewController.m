@@ -37,25 +37,30 @@
      name:UIDeviceOrientationDidChangeNotification
      object:nil];
 
-    MOLAnchorView *cokeAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"4" frame:CGRectMake(0,0,self.cokeAdAnchor.frame.size.width,self.cokeAdAnchor.frame.size.height)];
-    cokeAdView.tags = @"coke,sticker";
-    [self.cokeAdAnchor addSubview:cokeAdView];
-    [cokeAdView requestContent];
+}
 
-    MOLAnchorView *balloonAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"5" frame:CGRectMake(0,0,self.balloonAdAnchor.frame.size.width,self.balloonAdAnchor.frame.size.height)];
-    balloonAdView.tags = @"balloon,sticker";
-    [self.balloonAdAnchor addSubview:balloonAdView];
-    [balloonAdView requestContent];
+-(void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    self.cokeAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"4" frame:CGRectMake(0,0,self.cokeAdAnchor.frame.size.width,self.cokeAdAnchor.frame.size.height)];
+    self.cokeAdView.tags = @"coke,sticker";
+    [self.cokeAdAnchor addSubview:self.cokeAdView];
+    [self.cokeAdView requestContent];
 
-    MOLAnchorView *frogAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"6" frame:CGRectMake(0,0,self.frogAdAnchor.frame.size.width,self.frogAdAnchor.frame.size.height)];
-    frogAdView.tags = @"frog,sticker";
-    [self.frogAdAnchor addSubview:frogAdView];
-    [frogAdView requestContent];
+    self.balloonAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"5" frame:CGRectMake(0,0,self.balloonAdAnchor.frame.size.width,self.balloonAdAnchor.frame.size.height)];
+    self.balloonAdView.tags = @"balloon,sticker";
+    [self.balloonAdAnchor addSubview:self.balloonAdView];
+    [self.balloonAdView requestContent];
 
-    MOLAnchorView *snowAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"7" frame:CGRectMake(0,0,self.snowAdAnchor.frame.size.width,self.snowAdAnchor.frame.size.height)];
-    snowAdView.tags = @"snow,sticker";
-    [self.snowAdAnchor addSubview:snowAdView];
-    [snowAdView requestContent];
+    self.frogAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"6" frame:CGRectMake(0,0,self.frogAdAnchor.frame.size.width,self.frogAdAnchor.frame.size.height)];
+    self.frogAdView.tags = @"frog,sticker";
+    [self.frogAdAnchor addSubview:self.frogAdView];
+    [self.frogAdView requestContent];
+
+    self.snowAdView = [[MOLAnchorView alloc] initWithContentUnitId:@"7" frame:CGRectMake(0,0,self.snowAdAnchor.frame.size.width,self.snowAdAnchor.frame.size.height)];
+    self.snowAdView.tags = @"snow,sticker";
+    [self.snowAdAnchor addSubview:self.snowAdView];
+    [self.snowAdView requestContent];
 
 }
 
