@@ -10,10 +10,10 @@
 
 @interface MOLAnchorView : UIView
 
-- (id)initWithContentUnitId:(NSString *)contentUnitId frame:(CGRect)frame;
+-(id) initWithContentUnitId:(NSString *)contentUnitId frame:(CGRect)frame;
 
 -(void) requestContent;
 
-@property NSString *tags;
+@property (nonatomic) NSString *tags;
 
 @end
